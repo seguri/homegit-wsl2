@@ -19,3 +19,15 @@ git() {
     command git "$@"
   fi
 }
+
+if command -v batcat >/dev/null && [[ ! -L /usr/local/bin/bat ]]; then
+  # On Ubuntu, `bat` clashes with Bakula's `bat` and has been renamed to `batcat`
+  echo "Linking /usr/local/bin/bat to /usr/bin/batcat..."
+  sudo ln -s $(which batcat) /usr/local/bin/bat
+fi
+
+if command -v fdfind && [[ ! -L /usr/local/bin/fd ]]; then
+  # On Ubuntu, `fd` clashes with something already called `fd`
+  echo "Linking /usr/local/bin/fd to /usr/bin/fdfind..."
+  sudo ln -s $(which fdfind) /usr/local/bin/fd
+fi
