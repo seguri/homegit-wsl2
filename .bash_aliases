@@ -3,6 +3,10 @@ alias homegit='git.exe --git-dir=$HOME/.homegit/ --work-tree=$HOME'
 alias g=git
 alias gCm='git commit --message'
 alias gco='git checkout'
+alias gwd='git diff'
+alias gwdc='git diff --cached'
+alias gwR='git reset --hard'
+alias gwr='git reset --soft'
 alias gws='git status --short'
 alias j=just.exe
 alias ssh='ssh.exe'
