@@ -1,6 +1,7 @@
 EDITOR=vim
 VOLTA_HOME="$HOME/.volta"
 WIN_HOME="$(wslpath "$(powershell.exe '$env:USERPROFILE' | tr -d '\r')")"
+JOHNNY_DECIMAL_HOME="$WIN_HOME/OneDrive/Johnny.Decimal"
 
 if [ -f "$HOME/.bashrc" ]; then
 . "$HOME/.bashrc"
