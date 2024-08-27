@@ -24,6 +24,10 @@ git() {
   fi
 }
 
+jd() {
+  cd "$(johnny-decimal.sh $@)"
+}
+
 if command -v batcat >/dev/null && [[ ! -L /usr/local/bin/bat ]]; then
   # On Ubuntu, `bat` clashes with Bakula's `bat` and has been renamed to `batcat`
   echo "Linking /usr/local/bin/bat to /usr/bin/batcat..."
