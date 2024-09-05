@@ -8,6 +8,7 @@
     discard = checkout --
     ff = pull --ff-only
     info = !echo && git config --list | sort | column -s '=' -t && echo
+    last5 = log -5 --pretty=format:'%cd %h %s' --date=short
     list-submodules = !grep path .gitmodules | sed 's/.*= //'
     recommit = reset HEAD@{1}
     rename = branch -m
