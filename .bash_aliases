@@ -9,6 +9,7 @@ alias gwR='git reset --hard'
 alias gwr='git reset --soft'
 alias gws='git status --short'
 alias j=just.exe
+alias svba='source venv/bin/activate'
 alias ssh='ssh.exe'
 alias ssh-add='ssh-add.exe'
 
