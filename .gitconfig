@@ -3,6 +3,7 @@
     email = seguri@users.noreply.github.com
 [alias]
     alias = config --get-regexp ^alias\\.
+    branch-current = name-rev --name-only HEAD
     diffmerge = difftool --no-prompt --extcmd="diffmerge -- $4 $3"
     diff-remote = diff -- origin..master
     discard = checkout --
