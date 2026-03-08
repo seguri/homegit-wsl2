@@ -4,6 +4,7 @@
 [alias]
     alias = config --get-regexp ^alias\\.
     branch-current = name-rev --name-only HEAD
+    co = checkout
     diffmerge = difftool --no-prompt --extcmd="diffmerge -- $4 $3"
     diff-remote = diff -- origin..master
     discard = checkout --
@@ -18,3 +19,6 @@
     unstage = reset HEAD --
 [init]
     defaultBranch = main
+[core]
+	sshCommand = /mnt/c/Windows/System32/OpenSSH/ssh.exe
+	filemode = true
