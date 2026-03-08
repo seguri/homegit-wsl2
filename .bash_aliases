@@ -1,6 +1,6 @@
 alias ..='cd ..'
 alias homegit='git.exe --git-dir=$HOME/.homegit/ --work-tree=$HOME'
-alias g=git
+alias g=git.exe
 alias gCm='git commit --message'
 alias gco='git checkout'
 alias gwd='git diff'
@@ -9,6 +9,8 @@ alias gwR='git reset --hard'
 alias gwr='git reset --soft'
 alias gws='git status --short'
 alias j=just.exe
+alias mih='merge-images -d horizontal'
+alias miv='merge-images -d vertical'
 alias svba='source venv/bin/activate'
 alias ssh='ssh.exe'
 alias ssh-add='ssh-add.exe'
@@ -40,3 +42,9 @@ if command -v fdfind >/dev/null && [[ ! -L /usr/local/bin/fd ]]; then
   echo "Linking /usr/local/bin/fd to /usr/bin/fdfind..."
   sudo ln -s $(which fdfind) /usr/local/bin/fd
 fi
+
+x() {
+  if [[ -f package.json ]]; then
+    npm run dev
+  fi
+}
