@@ -1,3 +1,4 @@
+CONTEXT7_API_KEY="$(timeout 10 op.exe read 'op://krwjfey5g7p5jhwltepmsjhbcq/v5zb6nlmfih5gjcg72t6t4ceki/credential' 2>/dev/null || true)"
 EDITOR=vim
 VOLTA_HOME="$HOME/.volta"
 #WIN_HOME="$(wslpath "$(powershell.exe '$env:USERPROFILE' | tr -d '\r')")"
@@ -23,3 +24,6 @@ fi
 # delete duplicates from PATH
 PATH=$(echo "$PATH" | awk -F: '{for(i=1;i<=NF;i++){ if (!seen[$i]++) { out=out $i ":" } } print substr(out,0,length(out)-1)}')
 
+if [ -f "$HOME/.cargo/env" ]; then
+    . "$HOME/.cargo/env"
+fi
