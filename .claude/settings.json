@@ -1,0 +1,45 @@
+{
+  "env": {
+    "ENABLE_LSP_TOOL": "1"
+  },
+  "permissions": {
+    "allow": [
+      "Bash(cat *)",
+      "Bash(date)",
+      "Bash(ls)",
+      "Bash(ls *)",
+      "Bash(tail *)",
+      "Fetch(*)",
+      "Read(*)",
+      "Search(*)",
+      "WebFetch(*)",
+      "WebSearch(*)"
+    ]
+  },
+  "model": "opus",
+  "enabledPlugins": {
+    "skill-creator@claude-plugins-official": true,
+    "code-simplifier@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true
+  },
+  "extraKnownMarketplaces": {
+    "caveman": {
+      "source": {
+        "source": "github",
+        "repo": "JuliusBrussee/caveman"
+      }
+    }
+  },
+  "sandbox": {
+    "seccomp": {
+      "bpfPath": "/home/mark/.volta/tools/image/packages/@anthropic-ai/sandbox-runtime/lib/node_modules/@anthropic-ai/sandbox-runtime/vendor/seccomp/x64/unix-block.bpf",
+      "applyPath": "/home/mark/.volta/tools/image/packages/@anthropic-ai/sandbox-runtime/lib/node_modules/@anthropic-ai/sandbox-runtime/vendor/seccomp/x64/apply-seccomp"
+    }
+  },
+  "voiceEnabled": true,
+  "effortLevel": "xhigh",
+  "statusLine": {
+    "type": "command",
+    "command": "zsh $HOME/.claude/statusline.zsh"
+  }
+}
